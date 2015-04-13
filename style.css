@@ -1,6 +1,6 @@
 /* The first column of the table should have header cells that have italic text.
 (These should not be bold) */
-tbody tr td:first-child {
+tr td:first-child{ /* Presumably, this includes the footer */
 	font-style: italic;
 	/* td is not bold by default */
 }
@@ -28,4 +28,25 @@ tbody tr td:nth-child(odd) { /* One offset means it's odd */
 /* First column should have normal background color */
 tbody tr td:nth-child(1) { /* Specificity overrides odd and even */
 	background-color: white;
+}
+
+/* When you hover over a dt entry, its dd item should get a purple background. */
+dt:hover + dd {
+	background-color: purple;
+}
+
+.outer-content {
+	width: 75%;
+	margin-top: 20px;
+	background-color: pink;
+}
+
+.inner-content {
+	margin: 0 auto 0 auto;
+	width: 75%;
+	background-color: blue;
+}
+
+img {
+	float: left;
 }
