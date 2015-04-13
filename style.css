@@ -1,0 +1,31 @@
+/* The first column of the table should have header cells that have italic text.
+(These should not be bold) */
+tbody tr td:first-child {
+	font-style: italic;
+	/* td is not bold by default */
+}
+
+/* The first non-header cell of each non-header row should have 'red' text. */
+tbody tr td:nth-child(2) {
+	color: red;
+}
+
+/* The third non-header cell of each non-header row should have 'blue' text. */
+tbody tr td:nth-child(4) {
+	color: blue;
+}
+
+/* Odd non-header/footer rows should have a light green background. */
+tbody tr td:nth-child(even) { /* One offset means it's even */
+	background-color: LightGreen;
+}
+
+/* Even non-header/footer rows should have a light blue background */
+tbody tr td:nth-child(odd) { /* One offset means it's odd */
+	background-color: LightBlue;
+}
+
+/* First column should have normal background color */
+tbody tr td:nth-child(1) { /* Specificity overrides odd and even */
+	background-color: white;
+}
